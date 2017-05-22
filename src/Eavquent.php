@@ -312,7 +312,7 @@ trait Eavquent
     public function getInteractor()
     {
         return $this->interactor = $this->interactor
-            ?: $this->getContainer()->make(Interactor::class, [$this]);
+            ?: $this->getContainer()->makeWith(Interactor::class, [$this]);
     }
 
     /**
