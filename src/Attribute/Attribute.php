@@ -22,6 +22,15 @@ class Attribute extends Model
     protected $fillable = [
         'name', 'label', 'type', 'entity', 'default_value', 'collection',
     ];
+    
+    /**
+     * Cast attributes
+     *
+     * @var array
+     */
+    protected $casts = [
+        'label' => 'array'
+    ];
 
     /**
      * Attribute constructor.
