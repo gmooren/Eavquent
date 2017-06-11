@@ -35,6 +35,7 @@ abstract class Migration extends DatabaseMigration
 
             $this->contentColumn($table, 'content');
 
+            $table->text('meta')->nullable();
             $table->integer('attribute_id')->unsigned();
             $table->integer('entity_id')->unsigned();
         });
