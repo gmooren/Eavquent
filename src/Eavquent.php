@@ -417,11 +417,11 @@ trait Eavquent
      *
      * @return bool
      */
-    public function isForceDeleting()
-    {
-        return property_exists($this, 'forceDeleting') ?
-            $this->forceDeleting : false;
-    }
+    // public function isForceDeleting()
+    // {
+    //     return property_exists($this, 'forceDeleting') ?
+    //         $this->forceDeleting : false;
+    // }
 
     /**
      * Dynamically pipe calls to attribute relations.
