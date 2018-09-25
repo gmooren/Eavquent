@@ -76,6 +76,11 @@ trait Eavquent
         static::deleted(EntityWasDeleted::class . '@handle');
     }
 
+    protected static function isInitialized()
+    {
+        return \Schema::hasTable('eav_attributes');
+    }
+
     /**
      * Booting the registered attributes as relations.
      */
