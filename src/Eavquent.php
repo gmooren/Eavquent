@@ -59,6 +59,11 @@ trait Eavquent
      */
     public static function bootEavquent()
     {
+        if (!static::isInitialized()) {
+            static::$entityAttributes = collect([]);
+            return false;
+        }
+        
         $instance = new static;
         $manager = $instance->getAttributeManager();
 
